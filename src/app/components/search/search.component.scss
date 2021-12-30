@@ -1,0 +1,92 @@
+.search {
+  padding: 2rem;
+
+  .search-bar {
+    display: flex;
+
+    .custom-input {
+      background: black;
+      border: 1px solid white;
+      color: white;
+      outline: none;
+      padding: 5px 20px;
+      width: 100%;
+      max-width: 100%;
+      height: 40px;
+      border-radius: 30px;
+      font-family: 'Poppins',
+        sans-serif;
+
+      &::placeholder {
+        font-family: 'Poppins',
+          sans-serif;
+      }
+    }
+  }
+
+  h1 {
+    color: white;
+  }
+
+
+  .results {
+    width: 100%;
+    display: flex;
+
+
+    .cards-wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .card {
+        width: 15%;
+        height: 230px;
+        max-height: 230px;
+        border-radius: 30px;
+        margin: 0 1rem 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        position: relative;
+        transition: all .2s ease-in-out;
+
+        small {
+          color: white;
+          opacity: 0;
+          font-size: 13px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          margin-bottom: 1rem;
+          padding: 0 10px;
+        }
+
+        .gradient {
+          background: rgb(0, 0, 0);
+          background: linear-gradient(3deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.4766281512605042) 42%);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          cursor: pointer;
+
+          .gradient {
+            opacity: 1;
+          }
+
+          small {
+            opacity: 1;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}

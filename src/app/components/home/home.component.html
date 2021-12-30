@@ -1,0 +1,17 @@
+<section class="home">
+  <h1>Últimos lanzamientos</h1>
+  <app-loading *ngIf="loading"></app-loading>
+  <div class="cards-wrapper">
+    <div class="card" *ngFor="let release of newReleases">
+      <img [src]="release.images[0].url" alt="">
+      <div class="artists-wrapper">
+        <p>{{release.name}}</p>
+        <ul>
+          <li *ngFor="let artist of release.artists">
+            {{artist.name}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="search">
+  <div class="search-bar">
+    <input #artist class="custom-input" type="text" (keyup)="searchByArtist(artist.value)" placeholder="Search artist">
+  </div>
+
+  <h1>Resultados</h1>
+  
+  <div class="results">
+    <app-loading *ngIf="loading"></app-loading>
+    <div class="cards-wrapper" *ngIf="!loading">
+      <div (click)="getArtistDetail(artist)" class="card" *ngFor="let artist of artists"
+        [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')', 'background-size': 'cover', 'background-position':'center', 'background-color': 'black'}">
+        <small>
+          {{artist.name}}
+        </small>
+        <div class="gradient"></div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<div class="artist-container">
+  <div class="banner-top"
+    [ngStyle]="{'background-image': 'url(' + artist.images[0].url + ')', 'background-size': 'contain', 'background-position':'center', 'background-color': 'black'}">
+    <div class="gradient"></div>
+    <h1>
+      {{artist.name}}
+    </h1>
+    <h5>
+      Oyentes mensuales:
+      {{artist.followers.total }}
+    </h5>
+  </div>
+  <ul>
+    <li *ngFor="let track of topTracks">
+      {{track.name}}
+    </li>
+  </ul>
+</div>`
