@@ -10,9 +10,17 @@
       {{artist.followers.total }}
     </h5>
   </div>
-  <ul>
-    <li *ngFor="let track of topTracks">
-      {{track.name}}
-    </li>
-  </ul>
-</div>`
+  <div class="track-widget">
+    <h2>Canciones más escuchadas</h2>
+    <div class="track" *ngFor="let track of topTracks">
+      <p>
+        {{track.name}}
+      </p>
+      <div class="widget">
+        <iframe [src]="track.uri | secureDom"  width="300" height="80"
+          frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+
+  </div>
+</div>

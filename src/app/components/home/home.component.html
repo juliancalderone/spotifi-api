@@ -1,6 +1,12 @@
 <section class="home">
   <h1>Últimos lanzamientos</h1>
   <app-loading *ngIf="loading"></app-loading>
+  <div class="errorWrapper" *ngIf="errorMessage">
+    <h2>Ocurrió un error</h2>
+    <small>
+      {{errorDetail}}
+    </small>
+  </div>
   <div class="cards-wrapper">
     <div class="card" *ngFor="let release of newReleases">
       <img [src]="release.images[0].url" alt="">

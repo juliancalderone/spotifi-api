@@ -10,6 +10,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { SecureDomPipe } from './pipes/secure-dom.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     SearchComponent,
     ArtistComponent,
     NavbarComponent,
-    LoadingComponent
+    LoadingComponent,
+    SecureDomPipe
   ],
   imports: [
     BrowserModule,

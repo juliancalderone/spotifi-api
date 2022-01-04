@@ -33,9 +33,18 @@
     }
   }
 
-  ul {
-    li {
-      color: white;
+  .track-widget {
+    margin: 2rem;
+    .track {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-bottom: 2rem;
+
+      p {
+
+        color: white;
+      }
     }
   }
 }
